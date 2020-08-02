@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %5p [%c] %m%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <logger name="jdbc.connection" level="error" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+        <logger name="jdbc.sqlonly" level="info" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+        <Logger name="jdbc.sqltiming" level="error" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <logger name="jdbc.resultset" level="error" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+        <logger name="jdbc.resultsettable" level="error" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+        <logger name="jdbc.audit" level="warn" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+
+        <Logger name="egovframework" level="info" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <Logger name="org.springframework" level="info" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <Logger name="com.mindone" level="info" additivity="false">
+            <AppenderRef ref="console" />
+        </Logger>
+        <logger name="com.yjin.note.cmmn.service.impl.ComAbstractDao" level="error" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+        <Root level="info">
+            <AppenderRef ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
